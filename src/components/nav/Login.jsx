@@ -33,6 +33,8 @@ const Login = () => {
 
         setUSER_ID(login);
         setIsLoggedIn(true);
+        const homePage = '/';
+        window.history.pushState(null, null, homePage);
       } catch (error) {
         console.error(error);
       }
