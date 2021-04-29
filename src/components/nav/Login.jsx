@@ -17,7 +17,7 @@ const Login = () => {
       const { code } = qs.parse(window.location.search, {
         ignoreQueryPrefix: true,
       });
-      if (!code) return;
+      // if (!code) return;
 
       try {
         const res = await fetch(`/auth`, {
@@ -38,8 +38,8 @@ const Login = () => {
       }
     };
     getToken();
-    const homePage = '/';
-    window.history.pushState(null, null, homePage);
+    // const homePage = '/';
+    // window.history.pushState(null, null, homePage);
   }, []);
 
   return (

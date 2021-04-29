@@ -4,7 +4,7 @@ const axios = require('axios');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 
-router.get('/github/callback', (req, res) => {
+router.get('/github/callback/', (req, res) => {
   res.sendFile(path.join(__dirname, '../../build/index.html'));
 });
 
