@@ -11,7 +11,7 @@ const logInStyle = css`
 const LoginModal = ({ handleModalToggle }) => {
   return (
     <Shadow onClick={handleModalToggle}>
-      <GithubLogin href="http://localhost:3001/auth/github">
+      <GithubLogin href="/auth/github">
         <GitHubIcon />
         <div>
           <span>Sign in with GitHub</span>
