@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
+const path = require('path');
 const passport = require('passport');
 const GitHubStrategy = require('passport-github2');
 require('dotenv').config();
@@ -27,6 +28,12 @@ passport.use(
     }
   )
 );
+
+app.use(express.static(path.join(__dirname, '../build')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/build/index.html'));
+});
 
 app.listen(port, () => {
   console.log(`express is running on ${port}`);
