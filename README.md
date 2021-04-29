@@ -1,2 +1,1 @@
-# sidedish
-그룹프로젝트 #2
+Welcome to Raqqoon Banchan
