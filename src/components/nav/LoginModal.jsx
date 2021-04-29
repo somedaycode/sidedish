@@ -9,9 +9,10 @@ const logInStyle = css`
 `;
 
 const LoginModal = ({ handleModalToggle }) => {
+  const loginURL = `${process.env.REACT_APP_GITHUB_LOGIN_URL}`;
   return (
     <Shadow onClick={handleModalToggle}>
-      <GithubLogin href="/auth/github">
+      <GithubLogin href={loginURL}>
         <GitHubIcon />
         <div>
           <span>Sign in with GitHub</span>

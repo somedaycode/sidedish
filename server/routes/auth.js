@@ -2,14 +2,11 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const jwt = require('jsonwebtoken');
-const passport = require('passport');
+const path = require('path');
 
-router.get(
-  '/github',
-  passport.authenticate('github', {
-    scope: ['user', 'gist', 'notifications', 'repo'],
-  })
-);
+router.get('/github/callback', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../build/index.html'));
+});
 
 router.post('/', async (req, res) => {
   const client_id = process.env.GITHUB_CLIENT_ID;
