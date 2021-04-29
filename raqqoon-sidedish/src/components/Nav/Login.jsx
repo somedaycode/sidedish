@@ -20,7 +20,7 @@ const Login = () => {
       if (!code) return;
 
       try {
-        const res = await fetch(`http://localhost:3001/auth`, {
+        const res = await fetch(`/auth`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const Login = () => {
       }
     };
     getToken();
-    const homePage = 'http://localhost:3000';
+    const homePage = '/';
     window.history.pushState(null, null, homePage);
   }, []);
 
