@@ -38,8 +38,6 @@ const Login = () => {
       }
     };
     getToken();
-    // const homePage = '/';
-    // window.history.pushState(null, null, homePage);
   }, []);
 
   return (
