@@ -17,7 +17,7 @@ const Login = () => {
       const { code } = qs.parse(window.location.search, {
         ignoreQueryPrefix: true,
       });
-      // if (!code) return;
+      if (!code) return;
 
       try {
         const res = await fetch(`/auth`, {
